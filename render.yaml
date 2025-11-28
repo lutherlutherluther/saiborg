@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: saiborg
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 app.py
+    envVars:
+      - key: SLACK_BOT_TOKEN
+        sync: false
+      - key: SLACK_APP_TOKEN
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: MONDAY_API_KEY
+        sync: false
+      - key: MONDAY_CUSTOMER_BOARD_ID
+        sync: false
+        value: "5085798849"
+      - key: CHROMA_DB_PATH
+        sync: false
+        value: "chroma_db"
+
